@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic Honesty: una iniciativa estudiantil para promover la honestidad académica en EBC Campus Cancún.">
+  <title>Academic Honesty | EBC Campus Cancún</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="academic2.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Academic Honesty, inicio">
+      <span class="brand-mark" aria-hidden="true">AH</span>
+      <span class="brand-copy"><strong>ACADEMIC HONESTY</strong><small>EBC · Campus Cancún</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav-links" id="nav-links" aria-label="Navegación principal">
+      <a href="#inicio" class="nav-link active">Inicio</a>
+      <a href="#progreso" class="nav-link">Mi progreso</a>
+      <a href="#calendario" class="nav-link">Calendario</a>
+      <a href="#espacio-seguro" class="nav-link">Espacio seguro</a>
+    </nav>
+    <a class="header-cta" href="#espacio-seguro">Pedir orientación <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> INICIATIVA ESTUDIANTIL · AGO–DIC 2026</span>
+        <h1>La honestidad académica <span>empieza contigo.</span></h1>
+        <p class="hero-description">Un espacio para aprender, reflexionar y crecer con integridad. Lleva el control de tu progreso, participa en talleres y pide ayuda sin miedo a ser juzgado.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#progreso">Explorar mi progreso <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#calendario">Ver próximos talleres</a>
+        </div>
+        <div class="hero-note"><span class="note-icon">✦</span><span>Aprender con integridad también significa reconocer cuándo necesitamos apoyo.</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Ilustración decorativa de aprendizaje y honestidad">
+        <div class="visual-orbit orbit-one"></div><div class="visual-orbit orbit-two"></div>
+        <div class="visual-card card-main">
+          <div class="visual-symbol">✓</div>
+          <span class="visual-label">MI COMPROMISO</span>
+          <h3>Aprender con<br>integridad.</h3>
+          <div class="visual-progress"><span></span></div>
+          <div class="visual-card-footer"><span>Pequeñas decisiones</span><strong>+ impacto</strong></div>
+        </div>
+        <div class="floating-chip chip-top"><span class="chip-icon">✦</span> Crece a tu ritmo</div>
+        <div class="floating-chip chip-bottom"><span class="chip-check">✓</span> Tu progreso, paso a paso</div>
+        <div class="sparkle sparkle-one">✳</div><div class="sparkle sparkle-two">✦</div>
+      </div>
+    </section>
+
+    <section class="principles section-wrap" aria-label="Principios del proyecto">
+      <div class="principle"><span class="principle-icon blue">◎</span><div><strong>Autoconocimiento</strong><small>Reconoce tu progreso</small></div></div>
+      <div class="principle"><span class="principle-icon lilac">◇</span><div><strong>Decisiones éticas</strong><small>Analiza antes de actuar</small></div></div>
+      <div class="principle"><span class="principle-icon mint">♡</span><div><strong>Apoyo sin juicios</strong><small>Pedir ayuda está bien</small></div></div>
+    </section>
+
+    <section class="section-wrap section-block" id="progreso">
+      <div class="section-heading">
+        <div><span class="eyebrow">01 · AUTOCONOCIMIENTO</span><h2>Tu progreso, <span>a tu manera.</span></h2><p>Registra tus calificaciones de demostración y recibe sugerencias para seguir mejorando.</p></div>
+        <span class="demo-tag"><span></span> Datos de demostración</span>
+      </div>
+      <div class="progress-layout">
+        <div class="panel grades-panel">
+          <div class="panel-heading"><div><h3>Mis calificaciones</h3><p>Escala de 0 a 100</p></div><span class="panel-icon">▤</span></div>
+          <form id="grade-form" class="grade-form">
+            <label for="subject">Materia o actividad</label>
+            <input id="subject" name="subject" type="text" maxlength="60" placeholder="Ej. Inglés de Conservación" required>
+            <div class="form-row">
+              <div><label for="grade">Calificación</label><input id="grade" name="grade" type="number" min="0" max="100" step="1" placeholder="85" required></div>
+              <div><label for="grade-type">Tipo</label><select id="grade-type" name="grade-type"><option>Actividad</option><option>Examen</option><option>Entregable</option><option>Wooclap</option></select></div>
+            </div>
+            <button class="button button-primary full-button" type="submit">＋ Guardar calificación</button>
+            <p class="small-note">Este prototipo guarda la información en el almacenamiento local de este navegador.</p>
+          </form>
+        </div>
+        <div class="panel feedback-panel">
+          <div class="panel-heading"><div><h3>Mi resumen</h3><p>Una guía para reflexionar, no una evaluación oficial.</p></div><span class="panel-icon">↗</span></div>
+          <div class="score-summary"><div><span class="muted-label">Promedio registrado</span><div class="score-number"><span id="average-score">—</span><small>/100</small></div></div><div class="score-ring" id="score-ring"><span id="ring-score">—</span></div></div>
+          <div class="feedback-message" id="feedback-message" aria-live="polite"><span class="feedback-emoji">✦</span><div><strong>Tu progreso empieza aquí</strong><p>Agrega una calificación para recibir una sugerencia personalizada.</p></div></div>
+          <div class="grades-list-heading"><strong>Registros recientes</strong><button class="text-button" id="clear-grades" type="button">Borrar registros</button></div>
+          <ul class="grades-list" id="grades-list"><li class="empty-state">Aún no hay calificaciones registradas.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="calendar-section" id="calendario">
+      <div class="section-wrap section-block">
+        <div class="section-heading">
+          <div><span class="eyebrow">02 · APRENDIZAJE PRÁCTICO</span><h2>Aprender a decidir <span>con integridad.</span></h2><p>Explora los talleres propuestos y practica cómo analizar dilemas académicos.</p></div>
+          <span class="calendar-month">Otoño 2026 <span aria-hidden="true">⌄</span></span>
+        </div>
+        <div class="event-grid" id="event-grid">
+          <article class="event-card"><div class="event-date"><span>OCT</span><strong>15</strong></div><div class="event-content"><span class="event-type type-blue">CASO PRÁCTICO</span><h3>¿Colaboración o copia?</h3><p>Analiza los límites del trabajo en equipo y cómo citar aportaciones de otras personas.</p><div class="event-meta"><span>◷ 16:00–17:00</span><span>♧ Aula por confirmar</span></div><button class="event-action" data-event="collaboration" type="button">Ver caso <span>→</span></button></div></article>
+          <article class="event-card"><div class="event-date date-lilac"><span>OCT</span><strong>29</strong></div><div class="event-content"><span class="event-type type-lilac">TALLER</span><h3>Fuentes y uso responsable de IA</h3><p>Decide cómo reconocer fuentes, verificar información y declarar el uso de herramientas digitales.</p><div class="event-meta"><span>◷ 16:00–17:00</span><span>♧ Aula por confirmar</span></div><button class="event-action" data-event="ai" type="button">Ver caso <span>→</span></button></div></article>
+          <article class="event-card"><div class="event-date date-mint"><span>NOV</span><strong>12</strong></div><div class="event-content"><span class="event-type type-mint">SEMINARIO</span><h3>Presión académica y decisiones</h3><p>Practica cómo responder ante una fecha límite difícil y pedir apoyo a tiempo.</p><div class="event-meta"><span>◷ 16:00–17:00</span><span>♧ Aula por confirmar</span></div><button class="event-action" data-event="pressure" type="button">Ver caso <span>→</span></button></div></article>
+        </div>
+        <p class="calendar-disclaimer">Fechas, horarios y sedes son propuestas de demostración; deben confirmarse con la institución antes de publicarse como eventos oficiales.</p>
+      </div>
+    </section>
+
+    <section class="safe-section section-wrap section-block" id="espacio-seguro">
+      <div class="safe-intro">
+        <span class="eyebrow">03 · ACOMPAÑAMIENTO</span>
+        <h2>Un espacio para hablar <span>con confianza.</span></h2>
+        <p>No tienes que tener todas las respuestas. Comparte una duda, reconoce un error o pide orientación para encontrar una alternativa honesta.</p>
+        <div class="safe-promise"><span class="promise-icon">♡</span><div><strong>Sin juicios, con respeto.</strong><p>Este espacio busca facilitar la reflexión y la búsqueda de apoyo.</p></div></div>
+        <div class="privacy-reminder"><span>ⓘ</span><p><strong>Antes de escribir:</strong> no incluyas nombres, matrículas, contraseñas ni datos que puedan identificarte a ti o a otras personas.</p></div>
+      </div>
+      <div class="panel safe-form-panel">
+        <div class="panel-heading"><div><h3>Cuéntanos qué necesitas</h3><p>El formulario de esta versión es una demostración local.</p></div><span class="panel-icon">♡</span></div>
+        <form id="safe-form">
+          <label for="topic">¿Sobre qué te gustaría hablar?</label>
+          <select id="topic" required><option value="">Selecciona un tema</option><option>Presión por las calificaciones</option><option>Citas y uso de fuentes</option><option>Uso de inteligencia artificial</option><option>Trabajo en equipo</option><option>Reconocer un error</option><option>Otro tema académico</option></select>
+          <label for="message">Tu mensaje (no incluyas datos personales)</label>
+          <textarea id="message" rows="5" maxlength="1200" placeholder="Puedes describir la situación y qué tipo de orientación te ayudaría..." required></textarea>
+          <div class="character-count"><span>Comparte solo lo necesario.</span><span id="char-count">0/1200</span></div>
+          <div class="privacy-box">
+            <h4>Aviso de privacidad · versión de demostración</h4>
+            <p>En este prototipo, el mensaje y el tema se procesan únicamente en esta página para mostrar una confirmación; no se envían a la EBC ni a un equipo de orientación. No escribas información personal o sensible. Una versión real deberá definir al responsable del tratamiento, finalidades, conservación, destinatarios, medidas de seguridad y medios para ejercer derechos, y publicar un aviso revisado por la institución.</p>
+            <label class="consent-label"><input type="checkbox" id="privacy-consent" required><span>Leí y comprendí este aviso de privacidad de demostración.</span></label>
+          </div>
+          <button class="button button-primary full-button" type="submit">Enviar mensaje de prueba <span aria-hidden="true">→</span></button>
+          <p class="form-status" id="safe-status" role="status" aria-live="polite"></p>
+          <p class="small-note">No se guarda ni se transmite el contenido del mensaje.</p>
+        </form>
+      </div>
+    </section>
+
+    <section class="closing-banner section-wrap">
+      <div class="closing-icon">✦</div><div><h2>La integridad se practica, una decisión a la vez.</h2><p>Tu esfuerzo cuenta. Tu aprendizaje también.</p></div><a href="#inicio" class="button button-light">Volver al inicio ↑</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#inicio"><span class="brand-mark">AH</span><span class="brand-copy"><strong>ACADEMIC HONESTY</strong><small>EBC · Campus Cancún</small></span></a>
+    <p>Proyecto estudiantil · Inglés de Conservación · Agosto–Diciembre 2026</p>
+    <p class="footer-disclaimer">Prototipo académico no oficial. No representa una plataforma institucional de la EBC.</p>
+  </footer>
+
+  <dialog id="case-dialog" class="case-dialog">
+    <div class="dialog-top"><span class="eyebrow">CASO PRÁCTICO</span><button id="close-dialog" class="dialog-close" aria-label="Cerrar caso">×</button></div>
+    <h2 id="dialog-title">Dilema académico</h2><p id="dialog-description"></p>
+    <h3>¿Qué opciones tienes?</h3><div id="dialog-options" class="case-options"></div>
+    <div id="case-feedback" class="case-feedback" aria-live="polite"></div>
+    <button id="finish-case" class="button button-primary full-button" type="button">Reflexionar sobre el caso</button>
+  </dialog>
+  <script src="academic1.js"></script>
+</body>
+</html>
